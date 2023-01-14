@@ -9,6 +9,7 @@ import Blog from "./component/Blog/Blog";
 import Contact from "./component/Contact/Contact";
 import Footer from "./component/Footer";
 import "./App.css";
+import "react-tooltip/dist/react-tooltip.css";
 
 const App = () => {
   return (

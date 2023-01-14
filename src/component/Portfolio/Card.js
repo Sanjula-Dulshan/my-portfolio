@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import ReactPlayer from "react-player";
 
 const Card = (props) => {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
     setModal(!modal);
+  };
+
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   if (modal) {
@@ -14,16 +19,12 @@ const Card = (props) => {
   }
   return (
     <>
-      <div className="box btn_shadow ">
+      <div className="box btn_shadow " onClick={toggleModal}>
         <div className="img">
-          {console.log(props.image)}
-          <img src={props.image} alt={props.image} onClick={toggleModal} />
+          <img src={props.image} alt={props.image} />
         </div>
         <div className="category d_flex">
           <span onClick={toggleModal}>{props.category}</span>
-          <label>
-            <i className="far fa-heart"></i> {props.totalLike}
-          </label>
         </div>
         <div className="title">
           <h2 onClick={toggleModal}>{props.title}</h2>
@@ -39,28 +40,39 @@ const Card = (props) => {
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content d_flex">
             <div className="modal-img left">
-              <img src={props.image} alt="" />
+              {props?.video === undefined ? (
+                <img src={props.image} alt={props.image} />
+              ) : (
+                <ReactPlayer
+                  className="react-player"
+                  url={props?.video}
+                  light={props.image}
+                  controls
+                  playing={modal}
+                  loop={modal}
+                />
+              )}
             </div>
             <div className="modal-text right">
               <span>Featured - Design</span>
               <h1>{props.title}</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Cupiditate distinctio assumenda explicabo veniam temporibus
-                eligendi.
-              </p>
-              <p>
-                Consectetur adipisicing elit. Cupiditate distinctio assumenda.
-                dolorum alias suscipit rerum maiores aliquam earum odit, nihil
-                culpa quas iusto hic minus!
-              </p>
+              <p>{props?.description}</p>
+
               <div className="button f_flex mtop">
-                <button className="btn_shadow">
-                  LIKE THIS <i className="far fa-thumbs-up"></i>
+                <button
+                  className="btn_shadow"
+                  onClick={() => openInNewTab(props?.code)}
+                >
+                  SOURCE CODE
                 </button>
-                <button className="btn_shadow">
-                  VIEW PROJECT<i className="fas fa-chevron-right"></i>
-                </button>
+                {props?.demo !== undefined && (
+                  <button
+                    className="btn_shadow"
+                    onClick={() => openInNewTab(props?.demo)}
+                  >
+                    LIVE PREVIEW
+                  </button>
+                )}
               </div>
               <button className="close-modal btn_shadow" onClick={toggleModal}>
                 <i className="fas fa-times"></i>

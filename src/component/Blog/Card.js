@@ -2,31 +2,25 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 
 const Card = (props) => {
-  let history = useHistory();
-
-  const toggleModal = () => {};
-
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   return (
     <>
-      <div className="box btn_shadow ">
+      <div className="box btn_shadow " onClick={() => openInNewTab(props.link)}>
         <div className="img">
-          <img src={props.image} alt="" onClick={toggleModal} />
+          <img src={props.image} alt="" />
         </div>
         <div className="category d_flex">
-          <span onClick={toggleModal}>{props.date}</span>
+          <span>{props.date}</span>
           {/*<label>
             <i className='far fa-heart'></i> {props.date}
           </label>*/}
         </div>
         <div className="title">
-          <h2 onClick={toggleModal}>{props.title_one}</h2>
-          <a
-            href="https://medium.com/@it20253530/sql-vs-nosql-a028ee3adede"
-            className="arrow"
-            onClick={toggleModal}
-          >
-            <i className="fas fa-arrow-right"></i>
-          </a>
+          <h2>{props.title_one}</h2>
+
+          <i className="fas fa-arrow-right arrow"></i>
         </div>
       </div>
     </>

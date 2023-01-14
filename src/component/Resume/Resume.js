@@ -29,8 +29,7 @@ const Resume = () => {
                         key={id}
                         title={val.title}
                         year={val.year}
-                        rate={val.rate}
-                        desc={val.desc}
+                        desc={val?.desc}
                       />
                     );
                   }
