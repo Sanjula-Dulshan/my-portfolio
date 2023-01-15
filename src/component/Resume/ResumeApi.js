@@ -24,14 +24,14 @@ const ResumeApi = [
     category: "experience",
     year: "eBuilder Technology Center (Pvt) Ltd (2022/06 - 2022/12)",
     title: "Intern Software Engineer",
-    desc: "Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+    desc: "As a Software Engineer, I recently completed my internship at eBuilder Technology Center (Pvt) Ltd. I worked on several projects using React, Node.js and AWS technologies.",
   },
   {
     id: 5,
     category: "experience",
     year: "eBuilder Technology Center (Pvt) Ltd (2022/12 - Current)",
     title: "Apprentice Software Engineer",
-    desc: "Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+    desc: "After completing my internship, They offered me an Apprentice Software Engineer position based on my performance.",
   },
 ];
 
