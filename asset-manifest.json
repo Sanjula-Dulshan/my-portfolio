@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4baa523a.css",
+    "main.js": "/static/js/main.e11025b5.js",
+    "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
+    "static/media/hero.png": "/static/media/hero.9c0e46bc7fda78355956.png",
+    "static/media/c.png": "/static/media/c.666af1b3598c92045b63.png",
+    "static/media/node.png": "/static/media/node.290f630040630c5948b6.png",
+    "static/media/mongoDb.png": "/static/media/mongoDb.2f81ed7ec1fd818da1b5.png",
+    "static/media/aws.png": "/static/media/aws.99ae03c5e8dbc24c9d7e.png",
+    "static/media/firebase.png": "/static/media/firebase.ce5d87a009b9fcc80bdb.png",
+    "static/media/contact1.png": "/static/media/contact1.8ddfbfd11798f881db54.png",
+    "static/media/angular.png": "/static/media/angular.44279820589ebcb858b4.png",
+    "static/media/express.png": "/static/media/express.04e4743fbd704db71ed7.png",
+    "static/media/react.png": "/static/media/react.f3e576ba08e6be927148.png",
+    "static/media/java.png": "/static/media/java.2be0bca1b95cfc0ce63e.png",
+    "static/media/mySql.png": "/static/media/mySql.5bf2b384c4ccea98170d.png",
+    "static/media/js.png": "/static/media/js.9a8660c0ba114bdba499.png",
+    "static/media/github.png": "/static/media/github.c8007a9fb185cb152ee6.png",
+    "index.html": "/index.html",
+    "main.4baa523a.css.map": "/static/css/main.4baa523a.css.map",
+    "main.e11025b5.js.map": "/static/js/main.e11025b5.js.map",
+    "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4baa523a.css",
+    "static/js/main.e11025b5.js"
+  ]
+}
