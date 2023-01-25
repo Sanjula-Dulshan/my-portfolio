@@ -46,7 +46,6 @@ const Card = (props) => {
                 <ReactPlayer
                   className="react-player"
                   url={props?.video}
-                  light={props.image}
                   controls
                   playing={modal}
                   loop={modal}
@@ -57,6 +56,10 @@ const Card = (props) => {
               <span>Featured - Design</span>
               <h1>{props.title}</h1>
               <p>{props?.description}</p>
+              <p className="technologies">
+                <b>Used Technologies: </b>
+                {props?.technologies}
+              </p>
 
               <div className="button f_flex mtop">
                 <button

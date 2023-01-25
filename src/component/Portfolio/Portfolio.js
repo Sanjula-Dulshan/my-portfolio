@@ -25,6 +25,7 @@ const Portfolio = () => {
                   title={value.title}
                   code={value?.code}
                   demo={value?.demo}
+                  technologies={value?.technologies}
                 />
               );
             })}

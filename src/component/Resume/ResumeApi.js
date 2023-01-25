@@ -29,7 +29,7 @@ const ResumeApi = [
   {
     id: 5,
     category: "experience",
-    year: "eBuilder Technology Center (Pvt) Ltd (2022/12 - Current)",
+    year: "eBuilder Technology Center (Pvt) Ltd (2022/12 - Present)",
     title: "Apprentice Software Engineer",
     desc: "After completing my internship, They offered me an Apprentice Software Engineer position based on my performance.",
   },

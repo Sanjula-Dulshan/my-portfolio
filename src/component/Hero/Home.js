@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
 import hero from "../pic/hero.png";
-import skill1 from "../pic/skill1.png";
 
 import skillJs from "../pic/js.png";
 import skillJava from "../pic/java.png";
@@ -14,11 +13,15 @@ import skillAWS from "../pic/aws.png";
 import skillGitHub from "../pic/github.png";
 import skillFirebase from "../pic/firebase.png";
 import skillCLang from "../pic/c.png";
+import skillAngular from "../pic/angular.png";
 
 import { Typewriter } from "react-simple-typewriter";
 import { Tooltip } from "react-tooltip";
 
 const Home = () => {
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   return (
     <>
       <section className="hero" id="home">
@@ -44,13 +47,23 @@ const Home = () => {
             </h2>
 
             <p>
-              I am third-year undergraduate student at SLIIT. I have gained
-              academic theoretical and practical abilities, as well as An
-              enthusiastic, organized with good interpersonal skills, an
-              excellent team worker and keen to build upon my knowledge and
-              continue to learn new skills within the industry. I am looking for
-              an internship to enhance and augment my knowledge and skill base
-              while continuing my studies.
+              I am a 4th year undergraduate student at SLIIT, studying Bsc(Hons)
+              in Information Technology with a specialization in Software
+              Engineering. I have gained hands-on experience through a six-month
+              internship and currently working as an Apprentice Software
+              Engineer at eBuilder Technology Center Pvt Ltd, where I specialize
+              in AWS, ReactJS, and Node JS. I am a self-motivated individual
+              with a passion for technology and a desire to continuously learn.
+              I am looking for an opportunity to enhance and augment my
+              knowledge and skill base while continuing my studies.
+              {/* ................................................................. */}
+              {/* I am a 4th-year undergraduate student at SLIIT. I have hands-on
+              experience as an Apprentice Software Engineer at eBuilder
+              Technology Center Pvt Ltd, specializing in AWS, ReactJS, and Node
+              JS. I am a self-motivated individual with a passion for technology
+              and a desire to continuously learn and grow in software
+              development. I am looking for an opportunity to enhance and
+              augment my knowledge and skill base while continuing my studies. */}
               {/* I am 4th year undergraduate student at SLIIT, studying Bsc (Hons)
               Information Technology with a specialization in Software
               Engineering. With a passion for technology and a drive to always
@@ -70,7 +83,16 @@ const Home = () => {
               industry. Thank you for visiting my portfolio, and I hope you
               enjoy exploring my work and accomplishments. */}
             </p>
-            <button className="cv-btn">DOWNLOAD RESUME</button>
+            <button
+              className="cv-btn"
+              onClick={() =>
+                openInNewTab(
+                  "https://drive.google.com/file/d/1Ge-6KQNxc9Aciv7XeDbh2HzsP7zgnBdx/view?usp=sharing"
+                )
+              }
+            >
+              DOWNLOAD RESUME
+            </button>
 
             <div className="hero_btn d_flex">
               {/* <div className="col_1">
@@ -102,15 +124,16 @@ const Home = () => {
                   <h4>BEST SKILL ON</h4>
                 </div>
                 <div className="button">
-                  <button className="btn_shadow" id="mongoDb">
-                    <img src={skillMongoDb} alt="MongoDb" />
+                  <button className="btn_shadow" id="reactJs">
+                    <img src={skillReact} alt="React js" />
+                  </button>
+                  <button className="btn_shadow" id="angular">
+                    <img src={skillAngular} alt="Angular" />
                   </button>
                   <button className="btn_shadow" id="expressJs">
                     <img src={skillExpress} alt="Express js" />
                   </button>
-                  <button className="btn_shadow" id="reactJs">
-                    <img src={skillReact} alt="React js" />
-                  </button>
+
                   <button className="btn_shadow" id="nodeJs">
                     <img src={skillNode} alt="Node js" />
                   </button>
@@ -120,20 +143,24 @@ const Home = () => {
                   <button className="btn_shadow" id="java">
                     <img src={skillJava} alt="Java" />
                   </button>
+                  <button className="btn_shadow" id="c">
+                    <img src={skillCLang} alt="C Language" />
+                  </button>
                   <button className="btn_shadow" id="mySql">
                     <img src={skillMySql} alt="My SQL" />
                   </button>
+                  <button className="btn_shadow" id="mongoDb">
+                    <img src={skillMongoDb} alt="MongoDb" />
+                  </button>
+                  <button className="btn_shadow" id="firebase">
+                    <img src={skillFirebase} alt="Firebase" />
+                  </button>
+
                   <button className="btn_shadow" id="aws">
                     <img src={skillAWS} alt="AWS" />
                   </button>
                   <button className="btn_shadow" id="github">
                     <img src={skillGitHub} alt="Github" />
-                  </button>
-                  <button className="btn_shadow" id="firebase">
-                    <img src={skillFirebase} alt="Firebase" />
-                  </button>
-                  <button className="btn_shadow" id="c">
-                    <img src={skillCLang} alt="C Language" />
                   </button>
                 </div>
               </div>
@@ -157,6 +184,7 @@ const Home = () => {
       <Tooltip anchorId="github" place="bottom" content="Github" />
       <Tooltip anchorId="firebase" place="bottom" content="Firebase" />
       <Tooltip anchorId="c" place="bottom" content="C++ language" />
+      <Tooltip anchorId="angular" place="bottom" content="Angular" />
     </>
   );
 };
